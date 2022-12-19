@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background: #ffe3da;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script type="module">
+      import '../kairos-paper-rock-scissor.js';
+
+      function insertElement(id)
+      {
+        const livingElement = `<kairos-paper-rock-scissor id="${id}"></kairos-paper-rock-scissor>`;
+        document.body.insertAdjacentHTML('beforeend', livingElement);
+      }
+
+      function createElement(numberElement)
+      {
+        for (let index = 0; index < numberElement; index += 1)
+        {
+          insertElement(`item-${index}`);
+        }
+      }
+
+      createElement(50);
+    </script>
+  </body>
+</html>
